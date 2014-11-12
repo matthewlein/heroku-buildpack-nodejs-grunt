@@ -149,6 +149,9 @@ else
   HOME=$build_dir gem install sass --user-install --no-rdoc --no-ri
 fi
 
+status "echo path"
+echo $PATH
+
 # cache ruby gems sass
 rm -rf $cache_dir/ruby
 mkdir -p $cache_dir/ruby
