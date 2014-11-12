@@ -54,11 +54,6 @@ PATH=$PATH:$build_dir/vendor/node/bin
 # add /bin to path???
 PATH=$build_dir/bin:$PATH
 
-# install compass
-status "Setting Ruby gem path"
-export GEM_HOME=$build_dir/.gem/ruby/2.1.0
-PATH="$GEM_HOME/bin:$PATH"
-
 # Run subsequent node/npm commands from the build path
 cd $build_dir
 
@@ -144,7 +139,7 @@ fi
 
 # install sass
 status "Installing Sass"
-export GEM_HOME=$build_dir/.gem/ruby/1.9.1
+export GEM_HOME=$build_dir/.gem/ruby/2.1.0
 PATH="$GEM_HOME/bin:$PATH"
 if test -d $cache_dir/ruby/.gem; then
   status "Restoring ruby gems directory from cache"
