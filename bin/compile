@@ -9,6 +9,11 @@ build_dir=$1
 cache_dir=$2
 env_dir=$3
 
+# install compass
+status "Setting Ruby gem path"
+export GEM_HOME=$build_dir/.gem/ruby/2.1.0
+PATH="$GEM_HOME/bin:$PATH"
+
 bp_dir=$(cd $(dirname $0); cd ..; pwd)
 
 # Load some convenience functions like status(), echo(), and indent()
